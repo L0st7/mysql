@@ -9,7 +9,7 @@ FROM debian:buster-slim
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r mysql && useradd -r -g mysql mysql
 
-RUN apt-get update && apt-get upgrade -Y && apt-get install -y --no-install-recommends gnupg dirmngr
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends gnupg dirmngr
 
 # add gosu for easy step-down from root
 # https://github.com/tianon/gosu/releases
